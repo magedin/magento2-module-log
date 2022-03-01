@@ -1,6 +1,5 @@
 {
     "name": "magedin/module-logger",
-    "version": "1.0.0",
     "description": "This modules adds a new ability to create custom logs in the Magento application",
     "keywords": [
         "magento",
