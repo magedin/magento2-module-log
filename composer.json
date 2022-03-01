@@ -25,7 +25,7 @@
         "magedin/magento2-develop-tools": "~1.0.0"
     },
     "license": [
-        "Proprietary"
+        "OSL-3.0"
     ],
     "authors": [
         {
