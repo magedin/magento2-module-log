@@ -1,0 +1,66 @@
+{
+    "name": "magedin/module-logger",
+    "version": "1.0.0",
+    "description": "This modules adds a new ability to create custom logs in the Magento application",
+    "keywords": [
+        "magento",
+        "magento-module",
+        "magento2",
+        "magento2-module",
+        "magento2-logger"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagedIn\\Logger\\": ""
+        }
+    },
+    "type": "magento2-module",
+    "require": {
+        "php": "^7.2.0||^8.0.0",
+        "magento/framework": "~102.0||~103.0"
+    },
+    "require-dev": {
+        "magedin/magento2-develop-tools": "~1.0.0"
+    },
+    "license": [
+        "Proprietary"
+    ],
+    "authors": [
+        {
+            "name": "MagedIn Technology",
+            "email": "support@magedin.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "https://magedin.repo.repman.io"
+        }
+    ],
+    "scripts": {
+        "coding-standard": [
+            "@phpcs",
+            "@phpmd"
+        ],
+        "tests": [
+            "@coding-standard",
+            "@phpunit"
+        ],
+        "phpunit": "vendor/bin/phpunit Test",
+        "phpcs-configure": [
+            "vendor/bin/phpcs --config-set installed_paths vendor/magento/magento-coding-standard"
+        ],
+        "phpcs": [
+            "@phpcs-configure",
+            "vendor/bin/phpcs --standard=Magento2 --severity=1 --extensions=php Console Model Test"
+        ],
+        "phpmd": "vendor/bin/phpmd Logger.php, Model/ text cleancode,codesize,controversial,design,naming,unusedcode"
+    }
+}
