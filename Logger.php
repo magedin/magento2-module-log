@@ -12,11 +12,11 @@
 
 declare(strict_types=1);
 
-namespace MagedIn\Logger;
+namespace MagedIn\Log;
 
 use Magento\Framework\Filesystem\DirectoryList;
 
-class Logger
+class Logger implements LoggerInterface
 {
     /**
      * @var null
@@ -51,11 +51,7 @@ class Logger
     }
 
     /**
-     * @param $level
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function log($level, $message, array $context = [], string $file = null)
     {
@@ -64,10 +60,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function debug($message, array $context = [], string $file = null)
     {
@@ -76,10 +69,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function info($message, array $context = [], string $file = null)
     {
@@ -88,10 +78,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function warn($message, array $context = [], string $file = null)
     {
@@ -100,10 +87,7 @@ class Logger
     }
 
     /**
-     * @param string $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function warning(string $message, array $context = [], string $file = null)
     {
@@ -112,10 +96,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function err($message, array $context = [], string $file = null)
     {
@@ -124,10 +105,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function error($message, array $context = [], string $file = null)
     {
@@ -136,10 +114,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function crit($message, array $context = [], string $file = null)
     {
@@ -148,10 +123,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function critical($message, array $context = [], string $file = null)
     {
@@ -160,10 +132,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function alert($message, array $context = [], string $file = null)
     {
@@ -172,10 +141,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function emerg($message, array $context = [], string $file = null)
     {
@@ -184,10 +150,7 @@ class Logger
     }
 
     /**
-     * @param $message
-     * @param array $context
-     * @param string|null $file
-     * @return bool
+     * @inheritDoc
      */
     public function emergency($message, array $context = [], string $file = null)
     {

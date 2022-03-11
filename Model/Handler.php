@@ -12,7 +12,7 @@
 
 declare(strict_types=1);
 
-namespace MagedIn\Logger\Model;
+namespace MagedIn\Log\Model;
 
 use Magento\Framework\Logger\Handler\Base as BaseHandler;
 
