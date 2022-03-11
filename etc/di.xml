@@ -26,4 +26,9 @@
             </argument>
         </arguments>
     </type>
+    <type name="MagedIn\Log\LoggerInterface">
+        <arguments>
+            <argument name="filename" xsi:type="string">magedin_log.log</argument>
+        </arguments>
+    </type>
 </config>
