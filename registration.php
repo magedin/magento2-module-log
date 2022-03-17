@@ -14,6 +14,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'MagedIn_Logger',
+    'MagedIn_Log',
     __DIR__
 );
